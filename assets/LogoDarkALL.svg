@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg SYSTEM "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+<!ENTITY % SVG.External.attrib
+"xmlns:vm2d CDATA #FIXED 'http://www.cortona3d.com/vm2d'
+vm2d:name CDATA #IMPLIED
+vm2d:type CDATA #IMPLIED">
+]>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:vm2d="http://www.cortona3d.com/vm2d" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="120mm" height="40mm" viewBox="0 0 454 152" fill="none" fill-rule="evenodd" stroke-miterlimit="5">
+  <title>Без заголовка</title>
+  <desc>"Generator:ParallelGraphics Cortona2D","ProfileId:WebCGM""ProfileEd:2.1""ColourClass:colour""Source:Cortona2D Editor Pro 14.2.0.142""Date:20250216""Company:PIK"</desc>
+  <rect width="454" height="152" fill="#313131"/>
+  <defs/>
+  <g id="AUTOID_001" vm2d:name="" vm2d:type="layer"/>
+  <g id="AUTOID_007" vm2d:name="" vm2d:type="layer">
+    <g id="AUTOID_003" vm2d:name="" vm2d:type="grnode"/>
+    <g id="AUTOID_005" vm2d:name="" vm2d:type="grnode"/>
+    <g id="AUTOID_013" vm2d:name="" vm2d:type="grnode"/>
+    <g id="AUTOID_002" vm2d:name="" vm2d:type="grnode"/>
+    <g id="AUTOID_004" vm2d:name="" vm2d:type="grnode"/>
+    <g id="AUTOID_012" vm2d:name="" vm2d:type="grnode"/>
+  </g>
+  <g id="AUTOID_009" vm2d:name="" vm2d:type="layer"/>
+  <g id="AUTOID_015" vm2d:name="" vm2d:type="layer">
+    <g id="AUTOID_014" vm2d:name="" vm2d:type="grnode">
+      <g transform="matrix(3.78333,0,0,3.78333,-0,562.931)" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+        <path stroke="#d6d6d6" d="M39.151,-128.7 C39.151,-124.39 35.655,-120.9 31.342,-120.9 27.03,-120.9 23.534,-124.39 23.534,-128.7 23.534,-133.02 27.03,-136.51 31.342,-136.51 35.655,-136.51 39.151,-133.02 39.151,-128.7 Z"/>
+        <path stroke="#d6d6d6" d="M76.385,-128.7 C76.385,-124.39 72.889,-120.9 68.577,-120.9 64.264,-120.9 60.768,-124.39 60.768,-128.7 60.768,-133.02 64.264,-136.51 68.577,-136.51 72.889,-136.51 76.385,-133.02 76.385,-128.7 Z"/>
+        <path stroke="#d6d6d6" d="M57.768,-128.7 C57.768,-124.39 54.272,-120.9 49.959,-120.9 45.647,-120.9 42.151,-124.39 42.151,-128.7 42.151,-133.02 45.647,-136.51 49.959,-136.51 54.272,-136.51 57.768,-133.02 57.768,-128.7 Z"/>
+        <path stroke="#d6d6d6" d="M95.002,-128.7 C95.002,-124.39 91.506,-120.9 87.194,-120.9 82.881,-120.9 79.385,-124.39 79.385,-128.7 79.385,-133.02 82.881,-136.51 87.194,-136.51 91.506,-136.51 95.002,-133.02 95.002,-128.7 Z"/>
+        <path stroke="#d6d6d6" d="M20.534,-128.7 C20.534,-124.39 17.038,-120.9 12.725,-120.9 8.4124,-120.9 4.9164,-124.39 4.9164,-128.7 4.9164,-133.02 8.4124,-136.51 12.725,-136.51 17.038,-136.51 20.534,-133.02 20.534,-128.7 Z"/>
+        <path stroke="#d6d6d6" stroke-linecap="square" d="M23.534,-127.68 L23.534,-112.72 M60.768,-127.68 L60.768,-112.72"/>
+        <path stroke="#d6d6d6" d="M98.002,-136.51 L106.54,-120.9 115.08,-136.51"/>
+        <path stroke="#d6d6d6" stroke-linecap="square" d="M20.534,-120.9 L20.534,-144.69"/>
+        <path fill="#00f" d="M26.534,-136.51 C25.532,-136.51 24.536,-136.51 23.534,-136.51 23.534,-135.51 23.534,-134.51 23.534,-133.51 24.285,-134.73 25.313,-135.76 26.534,-136.51 Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
