@@ -18,6 +18,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 a {
@@ -61,23 +62,190 @@ a {
 }
 
 .project-main--embed .back-link,
-.project-main--embed .project-page-heading {
+.project-main--embed .project-page-heading,
+.project-main--embed .project-page-lead {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
 
-.project-embed-wrap {
-    width: 100%;
-    margin-top: 0.35rem;
+.project-page-lead {
+    margin: 0 0 1.25rem;
+    max-width: 52rem;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--muted, #9b9ba3);
+    font-weight: 400;
 }
 
-.project-art-iframe--primary {
+.project-page-lead[hidden] {
+    display: none !important;
+}
+
+.project-tiles-host {
+    width: 100%;
+    margin-top: 0.35rem;
+    padding: 0 1.25rem 2rem;
+    min-height: 4rem;
+}
+
+.project-tiles-host--loading::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin: 2rem auto;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    border-top-color: var(--muted, #9b9ba3);
+    border-radius: 50%;
+    animation: project-tiles-spin 0.7s linear infinite;
+}
+
+@keyframes project-tiles-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.project-tiles-grid {
+    --project-tile-min: clamp(9.5rem, 24vw, 19rem);
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, var(--project-tile-min)), 1fr)
+    );
+    gap: 6px;
+    align-items: start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-tile {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: #0d0e12;
+    overflow: hidden;
+    min-width: 0;
+    width: 100%;
+}
+
+.project-tile--image {
+    --tile-ar: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.project-tile-btn {
     display: block;
     width: 100%;
-    min-height: calc(100vh - 150px);
+    aspect-ratio: var(--tile-ar);
+    padding: 0;
+    margin: 0;
     border: none;
-    border-radius: 0;
+    cursor: zoom-in;
     background: #0d0e12;
+    border-radius: 0;
+}
+
+.project-tile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.project-tile--video {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+}
+
+.project-tile-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    background: #0a0b0e;
+}
+
+.project-tile-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.project-tile-caption {
+    margin: 0.5rem 0 0;
+    padding: 0 0.25rem 0.75rem;
+    font-size: 0.85rem;
+    color: var(--muted, #9b9ba3);
+    text-align: center;
+}
+
+.project-tiles-empty {
+    margin: 1.5rem 1.25rem;
+    color: var(--muted, #9b9ba3);
+    font-size: 0.9rem;
+}
+
+.project-tiles-empty a {
+    color: var(--text, #f0f0f2);
+    text-decoration: underline;
+}
+
+.project-lightbox {
+    padding: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.92);
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.project-lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.project-lightbox-inner {
+    position: relative;
+    padding: 2.5rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+}
+
+.project-lightbox-img {
+    max-width: min(96vw, 1400px);
+    max-height: min(88vh, 1200px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-lightbox-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text, #f0f0f2);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.project-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.18);
 }
 
 .back-link {
@@ -143,3 +311,4 @@ a {
         height: 35px;
     }
 }
+

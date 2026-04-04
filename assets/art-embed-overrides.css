@@ -1,0 +1,65 @@
+/* Overrides inside projects/*/art.html: ArtStation oEmbed uses fixed 699×393 — scale to layout width. */
+
+/* Full-width iframe document: avoid shrink-wrapped .project-page when embed uses only abspos children. */
+/*
+ * Single vertical scroll inside the iframe: only <html> scrolls (avoids html+body both scrolling).
+ * overflow-x: hidden prevents wide gallery/colorbox helpers from adding a second bar.
+ */
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body.theme-basic.project {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+body.theme-basic.project .project-page {
+    display: block;
+    width: 100%;
+    max-width: min(100%, 1120px);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body.theme-basic.project .project-section .container-lg.container-thin {
+    max-width: min(100%, 1120px);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/*
+ * Fluid 16:9: padding-bottom trick (abspos iframe does not contribute to intrinsic width;
+ * aspect-ratio alone can collapse the wrapper to ~min-content and squeeze the whole page).
+ */
+body.theme-basic.project .asset-responsive.responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+body.theme-basic.project .asset-responsive.responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    border: 0;
+}

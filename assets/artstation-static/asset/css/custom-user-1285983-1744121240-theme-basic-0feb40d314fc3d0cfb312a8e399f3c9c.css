@@ -11,9 +11,12 @@ body.theme-basic.project {
 }
 
 .project-page {
+    display: block;
+    width: 100%;
     max-width: 960px;
     margin: 0 auto;
     padding: 1rem 1.25rem 3rem;
+    box-sizing: border-box;
 }
 
 .project-section {

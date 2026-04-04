@@ -2,6 +2,7 @@
     'use strict';
 
     var LANG_KEY = 'portfolio-lang';
+    var SITE_ORIGIN = 'https://popov-da.ru';
 
     function getLang() {
         try {
@@ -40,6 +41,67 @@
             if (!r.ok) throw new Error('fetch ' + url);
             return r.json();
         });
+    }
+
+    /** Create or update a meta tag (name= or property=). */
+    function ensureMeta(attr, content) {
+        if (content == null || content === '') return;
+        var sel = attr.name
+            ? 'meta[name="' + attr.name + '"]'
+            : 'meta[property="' + attr.property + '"]';
+        var el = document.head.querySelector(sel);
+        if (!el) {
+            el = document.createElement('meta');
+            if (attr.name) el.setAttribute('name', attr.name);
+            if (attr.property) el.setAttribute('property', attr.property);
+            document.head.appendChild(el);
+        }
+        el.setAttribute('content', content);
+    }
+
+    function updateHomeSocial(t) {
+        if (!t) return;
+        ensureMeta({ name: 'description' }, t.meta_description);
+        ensureMeta({ property: 'og:title' }, t.page_title);
+        ensureMeta({ property: 'og:description' }, t.meta_description);
+        ensureMeta({ property: 'og:site_name' }, t.page_title);
+        ensureMeta({ name: 'twitter:title' }, t.page_title);
+        ensureMeta({ name: 'twitter:description' }, t.meta_description);
+        ensureMeta({ name: 'twitter:site_name' }, t.page_title);
+    }
+
+    function projectDescription(p, lang) {
+        if (!p || !p.description) return '';
+        return p.description[lang] || p.description.en || p.description.ru || '';
+    }
+
+    function applyBottomBarAlts(t) {
+        if (!t) return;
+        var keys = ['social_github', 'social_telegram', 'social_email', 'social_linkedin', 'social_hh'];
+        document.querySelectorAll('.bottom-bar a img').forEach(function (img, i) {
+            var key = keys[i];
+            if (key && t[key]) img.setAttribute('alt', t[key]);
+        });
+    }
+
+    function updateProjectSocial(t, p, projectSlug, title) {
+        var lang = getLang();
+        var desc = projectDescription(p, lang);
+        var siteName = t.page_title || 'Dmitrii Popov';
+        var fullTitle = title ? title + ' — ' + siteName : siteName;
+        var shareImg = (p && p.cdn) ? p.cdn : SITE_ORIGIN + '/preview.jpg';
+        var pageUrl = SITE_ORIGIN + '/projects/' + projectSlug + '/';
+
+        ensureMeta({ name: 'description' }, desc);
+        ensureMeta({ property: 'og:type' }, 'article');
+        ensureMeta({ property: 'og:url' }, pageUrl);
+        ensureMeta({ property: 'og:title' }, fullTitle);
+        ensureMeta({ property: 'og:description' }, desc);
+        ensureMeta({ property: 'og:image' }, shareImg);
+        ensureMeta({ name: 'twitter:card' }, 'summary_large_image');
+        ensureMeta({ name: 'twitter:title' }, fullTitle);
+        ensureMeta({ name: 'twitter:description' }, desc);
+        ensureMeta({ name: 'twitter:image' }, shareImg);
     }
 
     function initPortfolioCategoryTabs(t, projects) {
@@ -125,9 +187,6 @@
                 var group = document.querySelector('.lang-switch');
                 if (group && t.lang_aria) group.setAttribute('aria-label', t.lang_aria);
 
-                var nav = document.getElementById('site-nav');
-                if (nav && t.nav_aria) nav.setAttribute('aria-label', t.nav_aria);
-
                 document.querySelectorAll('a.card[data-project-slug]').forEach(function (card) {
                     var id = card.getAttribute('data-project-slug');
                     var p = projects[id];
@@ -139,14 +198,27 @@
                     if (img) img.alt = title;
                 });
 
-                var meta = document.querySelector('meta[name="description"]');
-                if (meta && t.meta_description) meta.setAttribute('content', t.meta_description);
+                updateHomeSocial(t);
 
                 if (t.page_title) document.title = t.page_title;
 
+                applyBottomBarAlts(t);
+
+                document.querySelectorAll('a.card[data-project-slug] .card-desc').forEach(function (descEl) {
+                    var card = descEl.closest('a.card');
+                    if (!card) return;
+                    var id = card.getAttribute('data-project-slug');
+                    var p = projects[id];
+                    var text = projectDescription(p, lang);
+                    descEl.textContent = text;
+                    descEl.hidden = !text;
+                });
+
                 initPortfolioCategoryTabs(t, projects);
             })
-            .catch(function () { /* keep static fallbacks */ });
+            .catch(function (err) {
+                console.warn('i18n initHome', err);
+            });
     }
 
     function initProject(projectSlug) {
@@ -174,14 +246,22 @@
                 var title = (p.title && (p.title[lang] || p.title.en || p.title.ru)) || '';
                 var h1 = document.querySelector('h1');
                 if (h1) h1.textContent = title;
-                document.title = title + ' — Dmitrii Popov';
+                document.title = title + ' — ' + (t.page_title || 'Dmitrii Popov');
 
-                var ifr = document.querySelector('.project-art-iframe--primary');
-                if (ifr && t.project_art_iframe_title) {
-                    ifr.setAttribute('title', t.project_art_iframe_title);
+                var lead = document.querySelector('.project-page-lead');
+                if (lead) {
+                    var desc = projectDescription(p, lang);
+                    lead.textContent = desc;
+                    lead.hidden = !desc;
                 }
+
+                applyBottomBarAlts(t);
+
+                updateProjectSocial(t, p, projectSlug, title);
             })
-            .catch(function () { /* keep static shell */ });
+            .catch(function (err) {
+                console.warn('i18n initProject', err);
+            });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
