@@ -1,0 +1,209 @@
+{
+  "vector-technical-illustrations": {
+    "assetId": "ygqyow",
+    "categories": ["documentation", "3d"],
+    "title": {
+      "ru": "Векторные технические иллюстрации",
+      "en": "Vector technical illustrations"
+    },
+    "description": {
+      "ru": "Векторные технические иллюстрации для эксплуатационной документации.",
+      "en": "Vector technical illustrations for operational documentation."
+    },
+    "cdn": "https://cdnb.artstation.com/p/assets/images/images/085/681/895/smaller_square/dmitriy-popov-1.jpg?1741367143"
+  },
+  "prototype-airbrb": {
+    "assetId": "qkgrj4",
+    "categories": ["it"],
+    "title": {
+      "ru": "Прототип «AirBrB»",
+      "en": "Prototype \"AirBrB\""
+    },
+    "description": {
+      "ru": "Прототип мобильного приложения «AirBrB».",
+      "en": "Prototype of the \"AirBrB\" mobile application."
+    },
+    "cdn": "https://cdnb.artstation.com/p/assets/images/images/084/430/901/20250131093547/smaller_square/dmitriy-popov-2025-01-31-183000.jpg?1738337747"
+  },
+  "house-sweden": {
+    "assetId": "l4g3gk",
+    "categories": ["3d"],
+    "title": {
+      "ru": "Дом «Швеция»",
+      "en": "The house \"Sweden\""
+    },
+    "description": {
+      "ru": "Архитектурная визуализация дома по проекту «Швеция».",
+      "en": "Architectural visualization of the house from the \"Sweden\" project."
+    },
+    "cdn": "https://cdna.artstation.com/p/assets/images/images/084/429/712/20250131090832/smaller_square/dmitriy-popov-01.jpg?1738336112"
+  },
+  "portalted": {
+    "assetId": "4np8l1",
+    "categories": ["it"],
+    "title": {
+      "ru": "PortalTED",
+      "en": "PortalTED"
+    },
+    "description": {
+      "ru": "Корпоративный портал ТЭД PortalTED.",
+      "en": "PortalTED corporate technical documentation portal."
+    },
+    "description_html": {
+      "ru": "Корпоративный портал технической и эксплуатационной документации (PortalTED). Сайт: <a href=\"https://portal.indstar.ru/\" target=\"_blank\" rel=\"noopener noreferrer\">portal.indstar.ru</a>",
+      "en": "Corporate technical and operational documentation portal (PortalTED). Website: <a href=\"https://portal.indstar.ru/\" target=\"_blank\" rel=\"noopener noreferrer\">portal.indstar.ru</a>"
+    },
+    "cdn": "https://cdna.artstation.com/p/assets/covers/images/084/429/134/smaller_square/dmitriy-popov-dmitriy-popov-logo.jpg?1738334728"
+  },
+  "presentation-videos-blender": {
+    "assetId": "3eexjg",
+    "categories": ["3d"],
+    "title": {
+      "ru": "Презентационные видео в Blender",
+      "en": "Presentation videos in Blender"
+    },
+    "description": {
+      "ru": "Презентационные ролики, подготовленные в Blender.",
+      "en": "Presentation videos created in Blender."
+    },
+    "description_html": {
+      "ru": "Презентационные ролики в Blender. На портале ТЭД: <a href=\"https://portal.indstar.ru/?node=present-units\" target=\"_blank\" rel=\"noopener noreferrer\">сборка модуля (UNITS)</a>, <a href=\"https://portal.indstar.ru/?node=present-stapel\" target=\"_blank\" rel=\"noopener noreferrer\">стапель-кантователь</a>.",
+      "en": "Presentation videos in Blender. On the TED portal: <a href=\"https://portal.indstar.ru/?node=present-units\" target=\"_blank\" rel=\"noopener noreferrer\">module assembly (UNITS)</a>, <a href=\"https://portal.indstar.ru/?node=present-stapel\" target=\"_blank\" rel=\"noopener noreferrer\">tilting fixture (stapel)</a>."
+    },
+    "cdn": "https://cdnb.artstation.com/p/assets/videos/images/091/742/737/smaller_square/dmitriy-popov-2058088340-37801a68bd661cae874070a600f10f9089a7e11c546334c5301c0e3654d1396e-d-295x166.jpg?1757655821"
+  },
+  "cyberpunk-for-the-poor": {
+    "assetId": "zedrqw",
+    "categories": ["3d"],
+    "title": {
+      "ru": "CyberPunk for the poor",
+      "en": "CyberPunk for the poor"
+    },
+    "description": {
+      "ru": "3D-сцена в киберпанк-эстетике.",
+      "en": "3D scene in a cyberpunk aesthetic."
+    },
+    "cdn": "https://cdna.artstation.com/p/assets/videos/images/045/758/322/smaller_square/dmitriy-popov-maxresdefault.jpg?1643464166"
+  },
+  "interactive-technical-documentation": {
+    "assetId": "rnql3r",
+    "categories": ["documentation", "it"],
+    "title": {
+      "ru": "Интерактивная техническая документация",
+      "en": "Interactive Technical Documentation"
+    },
+    "description": {
+      "ru": "Интерактивная техническая документация: AMM, IPD и сопутствующие материалы.",
+      "en": "Interactive technical documentation: AMM, IPD and related materials."
+    },
+    "cdn": "https://cdna.artstation.com/p/assets/videos/images/045/007/020/smaller_square/dmitriy-popov-maxresdefault.jpg?1641705249"
+  },
+  "laser-hair-removal-machine": {
+    "assetId": "raebee",
+    "categories": ["documentation", "3d"],
+    "title": {
+      "ru": "Аппарат лазерной эпиляции",
+      "en": "Laser hair removal machine"
+    },
+    "description": {
+      "ru": "Техническая документация и визуализация аппарата лазерной эпиляции.",
+      "en": "Technical documentation and visualization of a laser hair removal device."
+    },
+    "cdn": "https://cdna.artstation.com/p/assets/videos/images/033/249/098/smaller_square/dmitriy-popov-hqdefault.jpg?1608913403"
+  },
+  "scooter": {
+    "assetId": "rajpml",
+    "categories": ["3d"],
+    "title": {
+      "ru": "Самокат",
+      "en": "Scooter"
+    },
+    "description": {
+      "ru": "Реверс-инжиниринг и 3D-модель самоката.",
+      "en": "Reverse engineering and 3D model of a scooter."
+    },
+    "description_html": {
+      "ru": "Реверс-инжиниринг и 3D-модель самоката. Интерактивная публикация на портале ТЭД: <a href=\"https://portal.indstar.ru/?node=ietp-scooter\" target=\"_blank\" rel=\"noopener noreferrer\">открыть на портале</a>.",
+      "en": "Reverse engineering and 3D model of a scooter. Interactive publication on the TED portal: <a href=\"https://portal.indstar.ru/?node=ietp-scooter\" target=\"_blank\" rel=\"noopener noreferrer\">open on the portal</a>."
+    },
+    "cdn": "https://cdnb.artstation.com/p/assets/images/images/028/905/405/smaller_square/dmitriy-popov-1001-000-000-12321.jpg?1595875910"
+  },
+  "hydrocylinder": {
+    "assetId": "lvpzqv",
+    "categories": ["3d"],
+    "title": {
+      "ru": "Гидроцилиндр",
+      "en": "Hydrocylinder"
+    },
+    "description": {
+      "ru": "3D-модель и визуализация гидроцилиндра.",
+      "en": "3D model and visualization of a hydraulic cylinder."
+    },
+    "cdn": "https://cdna.artstation.com/p/assets/videos/images/023/488/970/smaller_square/dmitriy-popov-maxresdefault.jpg?1579369481"
+  },
+  "certificate-cswa": {
+    "assetId": "xz22lr",
+    "categories": ["3d"],
+    "title": {
+      "ru": "Сертификат CSWA",
+      "en": "Certificate CSWA"
+    },
+    "description": {
+      "ru": "Сертификат SolidWorks Certified Associate — Academic (CSWA).",
+      "en": "SolidWorks Certified Associate — Academic (CSWA) certificate."
+    },
+    "cdn": "https://cdnb.artstation.com/p/assets/images/images/018/063/201/smaller_square/dmitriy-popov-3.jpg?1558292766"
+  },
+  "shipping-container": {
+    "assetId": "4bdlzy",
+    "categories": ["3d"],
+    "title": {
+      "ru": "Морской контейнер",
+      "en": "Shipping container"
+    },
+    "description": {
+      "ru": "3D-визуализация морского контейнера.",
+      "en": "3D visualization of a shipping container."
+    },
+    "cdn": "https://cdna.artstation.com/p/assets/images/images/018/004/334/20190517160342/smaller_square/dmitriy-popov-o9ymki9ijhm.jpg?1558127022"
+  },
+  "aircraft-and-modifications": {
+    "assetId": "ryn5na",
+    "categories": ["3d"],
+    "title": {
+      "ru": "Самолёт и модификации",
+      "en": "Aircraft and modifications"
+    },
+    "description": {
+      "ru": "Авиационная тематика: модификации и визуализация.",
+      "en": "Aviation: modifications and visualization."
+    },
+    "cdn": "https://cdna.artstation.com/p/assets/videos/images/018/625/972/smaller_square/dmitriy-popov-hqdefault.jpg?1560104678"
+  },
+  "gold-product": {
+    "assetId": "kavy4g",
+    "categories": ["3d"],
+    "title": {
+      "ru": "Изделие из золота",
+      "en": "Gold product"
+    },
+    "description": {
+      "ru": "3D-моделирование ювелирного изделия.",
+      "en": "3D modeling of a gold jewelry piece."
+    },
+    "cdn": "https://cdna.artstation.com/p/assets/images/images/018/003/566/20190517153130/smaller_square/dmitriy-popov-fusion-360.jpg?1558125090"
+  },
+  "hydrocylinder-studies": {
+    "assetId": "babjmv",
+    "categories": ["3d"],
+    "title": {
+      "ru": "Гидроцилиндр: эскизы",
+      "en": "Hydrocylinder: studies"
+    },
+    "description": {
+      "ru": "Эскизы, разрезы и изображения гидроцилиндра (учебные материалы).",
+      "en": "Sketches, sections and drawings of a hydraulic cylinder (study work)."
+    },
+    "cdn": "https://cdnb.artstation.com/p/assets/images/images/018/003/407/smaller_square/dmitriy-popov-.jpg?1558124472"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "popov-portfolio",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve@14 -l 5173 .",
+    "slim": "node scripts/slim-art-html.mjs",
+    "validate": "node scripts/validate-project-slugs.mjs",
+    "sync-meta": "node scripts/sync-project-index-meta.mjs"
+  }
+}
