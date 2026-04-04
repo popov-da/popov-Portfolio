@@ -1,0 +1,95 @@
+# Build: minify static assets, then push the tree to branch gh-pages (GitHub Pages).
+# Исключён assets/artstation-static — сторонние бандлы; без --minify-js в HTML, чтобы не ломать встроенный gtag.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate project data
+        run: npm run validate
+
+      - name: Install minify tools
+        run: |
+          npm install -g html-minifier terser clean-css-cli
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Remove all .cgm files
+        continue-on-error: true
+        run: find . -path ./.git -prune -o \( -name '*.cgm' -type f -delete \)
+
+      - name: Minify HTML/HTM files
+        continue-on-error: true
+        run: |
+          echo "Minifying HTML/HTM files..."
+          while IFS= read -r -d '' file; do
+            echo "  -> $file"
+            html-minifier \
+              --collapse-whitespace \
+              --remove-comments \
+              --remove-optional-tags \
+              --minify-css true \
+              -o "$file" "$file" || echo "WARN: $file"
+          done < <(find . \( -path ./.git -o -path ./node_modules \) -prune -o -type f \( -name '*.html' -o -name '*.htm' \) -print0)
+
+      - name: Minify CSS files
+        continue-on-error: true
+        run: |
+          echo "Minifying CSS files..."
+          while IFS= read -r -d '' file; do
+            echo "  -> $file"
+            cleancss -o "$file" "$file" || echo "WARN: $file"
+          done < <(find . \( -path ./.git -o -path ./node_modules -o -path './assets/artstation-static*' \) -prune -o -type f -name '*.css' -print0)
+
+      - name: Minify JS files
+        continue-on-error: true
+        run: |
+          echo "Minifying JS files..."
+          while IFS= read -r -d '' file; do
+            echo "  -> $file"
+            terser --compress --mangle -o "$file" -- "$file" || echo "WARN: $file"
+          done < <(find . \( -path ./.git -o -path ./node_modules -o -path './assets/artstation-static*' \) -prune -o -type f -name '*.js' -print0)
+
+      - name: Minify XML files
+        continue-on-error: true
+        run: |
+          echo "Minifying XML files..."
+          while IFS= read -r -d '' file; do
+            echo "  -> $file"
+            tmp="$(mktemp)"
+            if xmllint --noblanks "$file" | tr -d '\n' > "$tmp" 2>/dev/null; then
+              mv "$tmp" "$file"
+            else
+              rm -f "$tmp"
+              echo "WARN: $file"
+            fi
+          done < <(find . \( -path ./.git -o -path ./node_modules \) -prune -o -type f -name '*.xml' -print0)
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: .

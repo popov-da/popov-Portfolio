@@ -46,8 +46,12 @@
       "en": "PortalTED"
     },
     "description": {
-      "ru": "Корпоративный портал PortalTED. Сайт: https://portal.indstar.ru/",
-      "en": "PortalTED corporate portal. Live site: https://portal.indstar.ru/"
+      "ru": "Корпоративный портал ТЭД PortalTED.",
+      "en": "PortalTED corporate technical documentation portal."
+    },
+    "description_html": {
+      "ru": "Корпоративный портал технической и эксплуатационной документации (PortalTED). Сайт: <a href=\"https://portal.indstar.ru/\" target=\"_blank\" rel=\"noopener noreferrer\">portal.indstar.ru</a>",
+      "en": "Corporate technical and operational documentation portal (PortalTED). Website: <a href=\"https://portal.indstar.ru/\" target=\"_blank\" rel=\"noopener noreferrer\">portal.indstar.ru</a>"
     },
     "cdn": "https://cdna.artstation.com/p/assets/covers/images/084/429/134/smaller_square/dmitriy-popov-dmitriy-popov-logo.jpg?1738334728"
   },
@@ -61,6 +65,10 @@
     "description": {
       "ru": "Презентационные ролики, подготовленные в Blender.",
       "en": "Presentation videos created in Blender."
+    },
+    "description_html": {
+      "ru": "Презентационные ролики в Blender. На портале ТЭД: <a href=\"https://portal.indstar.ru/?node=present-units\" target=\"_blank\" rel=\"noopener noreferrer\">сборка модуля (UNITS)</a>, <a href=\"https://portal.indstar.ru/?node=present-stapel\" target=\"_blank\" rel=\"noopener noreferrer\">стапель-кантователь</a>.",
+      "en": "Presentation videos in Blender. On the TED portal: <a href=\"https://portal.indstar.ru/?node=present-units\" target=\"_blank\" rel=\"noopener noreferrer\">module assembly (UNITS)</a>, <a href=\"https://portal.indstar.ru/?node=present-stapel\" target=\"_blank\" rel=\"noopener noreferrer\">tilting fixture (stapel)</a>."
     },
     "cdn": "https://cdnb.artstation.com/p/assets/videos/images/091/742/737/smaller_square/dmitriy-popov-2058088340-37801a68bd661cae874070a600f10f9089a7e11c546334c5301c0e3654d1396e-d-295x166.jpg?1757655821"
   },
@@ -113,6 +121,10 @@
     "description": {
       "ru": "Реверс-инжиниринг и 3D-модель самоката.",
       "en": "Reverse engineering and 3D model of a scooter."
+    },
+    "description_html": {
+      "ru": "Реверс-инжиниринг и 3D-модель самоката. Интерактивная публикация на портале ТЭД: <a href=\"https://portal.indstar.ru/?node=ietp-scooter\" target=\"_blank\" rel=\"noopener noreferrer\">открыть на портале</a>.",
+      "en": "Reverse engineering and 3D model of a scooter. Interactive publication on the TED portal: <a href=\"https://portal.indstar.ru/?node=ietp-scooter\" target=\"_blank\" rel=\"noopener noreferrer\">open on the portal</a>."
     },
     "cdn": "https://cdnb.artstation.com/p/assets/images/images/028/905/405/smaller_square/dmitriy-popov-1001-000-000-12321.jpg?1595875910"
   },

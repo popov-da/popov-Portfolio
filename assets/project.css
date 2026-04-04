@@ -81,6 +81,16 @@ a {
     display: none !important;
 }
 
+.project-page-lead a {
+    color: var(--text, #f0f0f2);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.project-page-lead a:hover {
+    color: var(--muted, #9b9ba3);
+}
+
 .project-tiles-host {
     width: 100%;
     margin-top: 0.35rem;
