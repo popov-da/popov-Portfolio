@@ -1,0 +1,45 @@
+/* Local fallback (ArtStation user theme недоступен по CDN). */
+body.theme-basic.project {
+    margin: 0;
+    background: #131418;
+    color: #f0f0f2;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+.site-wrapper {
+    min-height: 100vh;
+}
+
+.project-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem 3rem;
+}
+
+.project-section {
+    margin-bottom: 2rem;
+}
+
+.block-image img,
+.project-assets-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-asset-caption {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #9b9ba3;
+}
+
+.container-sm {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+{
+  "ru": {
+    "page_title": "Dmitrii Popov",
+    "meta_description": "Портфолио: 3D, визуализация, техническая документация",
+    "subtitle": "Инженер",
+    "nav_aria": "Навигация",
+    "nav_projects": "Проекты",
+    "nav_resume": "Резюме",
+    "section_portfolio": "Портфолио",
+    "back_portfolio": "← К портфолио",
+    "lang_aria": "Язык",
+    "portfolio_cat_aria": "Категории работ",
+    "tab_cat_all": "Все",
+    "tab_cat_3d": "3D",
+    "tab_cat_documentation": "Документация",
+    "tab_cat_it": "IT",
+    "project_art_iframe_title": "Материалы проекта"
+  },
+  "en": {
+    "page_title": "Dmitrii Popov",
+    "meta_description": "Portfolio: 3D, visualization, technical documentation",
+    "subtitle": "Engineer",
+    "nav_aria": "Navigation",
+    "nav_projects": "Projects",
+    "nav_resume": "Resume",
+    "section_portfolio": "Portfolio",
+    "back_portfolio": "← Back to portfolio",
+    "lang_aria": "Language",
+    "portfolio_cat_aria": "Project categories",
+    "tab_cat_all": "All",
+    "tab_cat_3d": "3D",
+    "tab_cat_documentation": "Documentation",
+    "tab_cat_it": "IT",
+    "project_art_iframe_title": "Project materials"
+  }
+}
